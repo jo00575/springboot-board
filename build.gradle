@@ -6,7 +6,7 @@ plugins {
 
 group = 'com.example'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '11'
+sourceCompatibility = '1.8'
 
 repositories {
     mavenCentral()
@@ -17,6 +17,9 @@ dependencies {
     implementation 'junit:junit:4.12'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+
+    runtimeOnly 'com.h2database:h2'
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
 
