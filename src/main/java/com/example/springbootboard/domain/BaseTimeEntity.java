@@ -11,13 +11,13 @@ import java.time.LocalDateTime;
 
 @Getter
 @MappedSuperclass   // JPA Entity 가 BaseTimeEntity 를 상속할 경우 아래 필드들도 컬럼으로 인식하도록 함.
-@EntityListeners(AuditingEntityListener.class)
+@EntityListeners(AuditingEntityListener.class)      // BaseTimeEntity 클래스에 Auditing 기능을 포함시킴.
 public abstract class BaseTimeEntity {
 
-    @CreatedDate
+    @CreatedDate    // Entity 가 생성되어 저장될 때의 시간이 자동 저장된다.
     private LocalDateTime createdDate;
 
-    @LastModifiedDate
+    @LastModifiedDate   // 조회한 Entity 의 값을 변경할 때 시간이 자동 저장된다.
     private LocalDateTime modifiedDate;
 
 }
