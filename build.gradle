@@ -19,12 +19,17 @@ dependencies {
 
     implementation 'org.springframework.boot:spring-boot-starter-mustache'
 
+    // 클라이언트 입장에서 소셜 기능 구현 시 필요한 의존성
+    implementation 'org.springframework.boot:spring-boot-starter-oauth2-client'
+    testImplementation 'org.springframework.security:spring-security-test'
+    // 로그인 세션 DB 관리
+    implementation 'org.springframework.session:spring-session-jdbc'
+
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 
     runtimeOnly 'com.h2database:h2'
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
-
 }
 
 test {
